@@ -10,7 +10,7 @@ const Tweet = React.createClass({
   renderDate() {
     return (
       <span className="tweet__date">
-        {moment(this.props.tweet.date).format('LLL')}
+        {moment(new Date(this.props.tweet.date)).format('LLL')}
       </span>
     );
   },

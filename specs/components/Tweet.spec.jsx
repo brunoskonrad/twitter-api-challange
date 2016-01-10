@@ -2,18 +2,21 @@ import Tweet from 'components/Tweet.jsx';
 import React from 'react';
 import ReactTestUtils from 'react-addons-test-utils';
 
-describe('Test the Tweet Component', () => {
-  it('works, please...', () => {
-    const fixture = {
-      id: 685602466646356000,
-      content: 'Hello World',
-      date: 'Fri Jan 08 23:22:20 +0000 2016'
-    };
-    const tweet = ReactTestUtils.renderIntoDocument(
-      <Tweet tweet={fixture}/>);
-    const content = ReactTestUtils.findRenderedDOMComponentWithTag(
-      tweet, 'p');
+import fixture from 'fixtures/tweet.json';
 
+describe('Test the Tweet Component', () => {
+  const tweet = ReactTestUtils.renderIntoDocument(
+    <Tweet tweet={fixture} />);
+
+  it('should render the `Hello World` tweet content properly', () => {
+    const content = ReactTestUtils.findRenderedDOMComponentWithClass(
+      tweet, 'tweet__content');
     expect(content.textContent).toEqual('Hello World');
+  });
+
+  it('should render the tweet\'s date/time', () => {
+    const dateTime = ReactTestUtils.findRenderedDOMComponentWithClass(
+      tweet, 'tweet__date');
+    expect(dateTime.textContent).toEqual('January 8, 2016 9:22 PM');
   });
 });

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 685602466646356000,
+    "content": "Hello World",
+    "date": "Fri Jan 08 23:22:20 +0000 2016"
+  },
+  {
+    "id": 685602466646356001,
+    "content": "Lorem ipsum dolor sit",
+    "date": "Fri Jan 08 23:24:11 +0000 2016"
+  },
+  {
+    "id": 685602466646356002,
+    "content": "This is so fun",
+    "date": "Fri Jan 08 23:24:56 +0000 2016"
+  },
+  {
+    "id": 685602466646356003,
+    "content": "Fixture's end",
+    "date": "Sat Jan 09 00:02:31 +0000 2016"
+  }
+]
