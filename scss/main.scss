@@ -1,7 +1,10 @@
-body {
-  background-color: #e0dfdb;
-}
+@import 'resources';
 
-.do {
-  background-color: blue;
+@import 'components/tweets-list';
+@import 'components/tweet';
+
+body {
+  background-color: #e1e8ed;
+  font-family: 'Droid Sans';
+  padding: 12px;
 }

@@ -30,7 +30,9 @@ const App = React.createClass({
     return (
       <div>
         <h1>Hello World</h1>
-        {this.renderTweets()}
+        <div className="tweets-list">
+          {this.renderTweets()}
+        </div>
       </div>
     );
   }

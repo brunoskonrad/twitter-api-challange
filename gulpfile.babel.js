@@ -8,7 +8,10 @@ import webpack from 'webpack';
 import webpackConfig from './webpack.config.client';
 
 const blob = {
-  sass: './scss/main.scss',
+  sass: {
+    entry: './scss/main.scss',
+    all: './scss/**/*.scss',
+  },
   client: [
     './src/**/*.js',
     './src/**/*.jsx',
@@ -21,7 +24,7 @@ const blob = {
 };
 
 gulp.task('build:scss', () => {
-  return gulp.src(blob.sass)
+  return gulp.src(blob.sass.entry)
     .pipe(sourcemaps.init())
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(autoprefixer())
@@ -37,8 +40,8 @@ gulp.task('build:client', () => {
   });
 });
 
-gulp.task('watch', () => {
-  gulp.watch(blob.sass, ['build:scss']);
+gulp.task('watch', ['build'], () => {
+  gulp.watch(blob.sass.all, ['build:scss']);
   gulp.watch(blob.client, ['build:client']);
 })
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 const Tweet = React.createClass({
   getDefaultProps() {
@@ -6,11 +7,21 @@ const Tweet = React.createClass({
       tweet: {}
     };
   },
+  renderDate() {
+    return (
+      <span className="tweet__date">
+        {moment(this.props.tweet.date).format('LLL')}
+      </span>
+    );
+  },
   render() {
     return (
-      <div key={this.props.tweet.id}>
-        <p>{this.props.tweet.content}</p>
-        <span>{this.props.tweet.date}</span>
+      <div className="tweet"
+        key={this.props.tweet.id} >
+        <p className="tweet__content">
+          {this.props.tweet.content}
+        </p>
+        {this.renderDate()}
       </div>
     );
   }
