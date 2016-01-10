@@ -11,6 +11,7 @@ function getTwitterObject() {
 
 function filterTweetsData(tweet) {
   return {
+    id: tweet.id,
     date: tweet.created_at,
     content: tweet.text,
   }
@@ -29,7 +30,7 @@ function getTweets(user) {
         reject(error);
       }
 
-      resolve (tweets.map(filterTweetsData));
+      resolve(tweets.map(filterTweetsData));
     });
   });
 }

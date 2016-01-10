@@ -16,7 +16,9 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'node_modules/promise-polyfill/Promise.min.js',
-      'specs/**/*.spec.js'
+      'specs/polyfill/*.js',
+      'specs/**/*.spec.js',
+      'specs/**/*.spec.jsx',
     ],
 
 
@@ -29,10 +31,11 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'specs/**/*.spec.js': ['webpack']
+      'specs/**/*.spec.js': ['webpack'],
+      'specs/**/*.spec.jsx': ['webpack']
     },
 
-    webpack: require('./webpack/webpack.config.test'),
+    webpack: require('./webpack.config.test'),
 
 
     // test results reporter to use
