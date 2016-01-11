@@ -1,0 +1,41 @@
+%form-style {
+  min-height: 30px;
+}
+
+.search-bar {
+  font-size: 16px;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  margin: 0 auto;
+
+  &__greetings {
+    width: 100vw;
+    font-size: 1em;
+  }
+
+  &__input-twitter {
+    @extend %form-style;
+    background-color: $color-almost-white;
+    border: 0;
+    border-bottom: 2px solid $color-gray;
+  }
+
+  &__search-button {
+    @extend %form-style;
+    padding: 12px;
+    color: $color-white;
+    background-color: $color-blue;
+    border-radius: 3px;
+    font-size: 16px;
+    text-align: center;
+    border: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .search-bar {
+    width: 624px;
+    font-size: 24px;
+  }
+}

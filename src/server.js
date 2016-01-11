@@ -5,8 +5,8 @@ const app = express();
 
 app.use(express.static('public'));
 
-app.get('/tweets', (req, res) => {
-  twitter.getTweets('brunoskonrad')
+app.get('/tweets/:twitterName', (req, res) => {
+  twitter.getTweets(req.params.twitterName)
     .then((tweets) => {
       res.json(tweets);
     }, (error) => {
