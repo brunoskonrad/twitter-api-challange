@@ -18,10 +18,11 @@ const SearchBar = React.createClass({
     return (
       <header className="search-bar">
         <span className="search-bar__greetings">
-          Search tweets from
+          Search tweets from any user
         </span>
         <input className="search-bar__input-twitter"
           type="text"
+          placeholder="Your @ here"
           onChange={this.handleInputChange} />
         <button className="search-bar__search-button"
           onClick={this.search}>

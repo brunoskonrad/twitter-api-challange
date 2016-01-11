@@ -30,6 +30,7 @@ function getTweets(user) {
         reject(error);
       }
 
+      console.log(JSON.stringify(tweets));
       resolve(tweets.map(filterTweetsData));
     });
   });

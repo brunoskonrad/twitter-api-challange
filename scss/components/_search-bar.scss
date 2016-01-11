@@ -6,19 +6,23 @@
   font-size: 16px;
   display: flex;
   flex-flow: wrap row;
-  justify-content: center;
   margin: 0 auto;
 
   &__greetings {
     width: 100vw;
-    font-size: 1em;
+    font-size: 1.3em;
+    margin-bottom: 12px;
   }
 
   &__input-twitter {
     @extend %form-style;
     background-color: $color-almost-white;
     border: 0;
-    border-bottom: 2px solid $color-gray;
+    border-bottom: 2px solid gray;
+
+    font-size: 1em;
+    margin-right: 12px;
+    padding: 0 8px;
   }
 
   &__search-button {
@@ -37,5 +41,9 @@
   .search-bar {
     width: 624px;
     font-size: 24px;
+
+    &__input-twitter {
+      padding: 0 12px;
+    }
   }
 }
