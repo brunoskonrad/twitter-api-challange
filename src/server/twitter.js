@@ -9,11 +9,22 @@ function getTwitterObject() {
   });
 }
 
+function getMedia(tweet) {
+  if (!tweet.extended_entities || !tweet.extended_entities.media) {
+    return null;
+  }
+
+  return tweet.extended_entities.media.map((media) => {
+    return [media.media_url, media.media_url_https]
+  });
+}
+
 function filterTweetsData(tweet) {
   return {
     id: tweet.id,
     date: tweet.created_at,
     content: tweet.text,
+    media: getMedia(tweet)
   }
 }
 
@@ -30,7 +41,6 @@ function getTweets(user) {
         reject(error);
       }
 
-      console.log(JSON.stringify(tweets));
       resolve(tweets.map(filterTweetsData));
     });
   });

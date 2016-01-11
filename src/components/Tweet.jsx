@@ -14,6 +14,12 @@ const Tweet = React.createClass({
       </span>
     );
   },
+  renderMedia() {
+    return this.props.tweet.media.map((media) => {
+      const [httpImage, httpsImage] = media;
+      return <img src={httpImage} className="tweet__image" />
+    });
+  },
   render() {
     return (
       <div className="tweet"
@@ -21,6 +27,7 @@ const Tweet = React.createClass({
         <p className="tweet__content">
           {this.props.tweet.content}
         </p>
+        {this.props.tweet.media && this.renderMedia()}
         {this.renderDate()}
       </div>
     );

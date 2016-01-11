@@ -8,6 +8,7 @@ app.use(express.static('public'));
 app.get('/tweets/:twitterName', (req, res) => {
   twitter.getTweets(req.params.twitterName)
     .then((tweets) => {
+      console.log(tweets);
       res.json(tweets);
     }, (error) => {
       res.json(tweets);
