@@ -39,7 +39,7 @@ function getTweets(user) {
     };
     twitter.get(resource, params, (error, tweets, response) => {
       if (error) {
-        reject(error);
+        return reject(error);
       }
 
       resolve(tweets.map(filterTweetsData));
