@@ -10,7 +10,7 @@ app.get('/tweets/:twitterName', (req, res) => {
     .then((tweets) => {
       res.json(tweets);
     }, (error) => {
-      res.json(error);
+      res.status(400).json(error);
     });
 });
 
