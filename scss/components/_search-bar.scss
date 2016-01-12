@@ -7,7 +7,7 @@
   display: flex;
   flex-flow: wrap row;
   align-items: center;
-  background-color: $color-white;
+  background-color: $color-almost-white;
 
   &__greetings {
     flex: 1 100%;
@@ -17,7 +17,7 @@
 
   &__input-twitter {
     @extend %form-style;
-    background-color: $color-white;
+    background-color: $color-almost-white;
     border: 0;
     border-bottom: 2px solid gray;
 
