@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'Droid Sans';
+  src: url("../assets/droid-sans/DroidSans.ttf") format("truetype"); }
+
+.app {
+  min-height: calc(100vh - 40px);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap column;
+      -ms-flex-flow: wrap column;
+          flex-flow: wrap column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .app__loading {
+    width: 56px;
+    height: 56px;
+    margin: 46px 0;
+    background-image: url("../assets/loading.svg"); }
+
+.search-bar__input-twitter, .search-bar__search-button {
+  min-height: 40px; }
+
+.search-bar {
+  font-size: 1em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap row;
+      -ms-flex-flow: wrap row;
+          flex-flow: wrap row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background-color: #e1e8ed; }
+  .search-bar__greetings {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 100%;
+        -ms-flex: 1 100%;
+            flex: 1 100%;
+    font-size: 1.3em;
+    margin-bottom: 12px; }
+  .search-bar__input-twitter {
+    max-width: 60%;
+    background-color: #e1e8ed;
+    border: 0;
+    border-bottom: 2px solid gray;
+    font-size: 1em;
+    margin-right: 8px;
+    padding-right: 8px;
+    padding-left: 20px; }
+  .search-bar__search-button {
+    padding: 12px;
+    color: #ffffff;
+    background-color: #55acee;
+    border-radius: 3px;
+    font-size: 18px;
+    text-align: center;
+    border: 0; }
+  .search-bar__at-placeholder {
+    color: gray;
+    font-size: 1em;
+    position: absolute;
+    bottom: 14px;
+    left: 0; }
+
+@media screen and (min-width: 568px) {
+  .search-bar {
+    width: 568px; }
+    .search-bar__input-twitter {
+      padding-left: 24px; }
+    .search-bar__at-placeholder {
+      bottom: 8px; } }
+
+.tweet {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap column;
+      -ms-flex-flow: wrap column;
+          flex-flow: wrap column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 1em;
+  margin-top: 3em; }
+  .tweet__content {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 100%;
+        -ms-flex: 1 100%;
+            flex: 1 100%;
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.6em; }
+  .tweet__image {
+    max-width: 89vw;
+    width: 340px;
+    height: 283px; }
+  .tweet__date {
+    font-size: 0.8em;
+    color: gray;
+    margin-top: 1em; }
+
+@media screen and (min-width: 568px) {
+  .tweet {
+    width: 568px; }
+    .tweet__image {
+      max-width: 624px; } }
+
+.footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap column;
+      -ms-flex-flow: wrap column;
+          flex-flow: wrap column;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  margin-top: 40px;
+  font-size: 18px;
+  color: gray; }
+  .footer__twitter {
+    width: 32px;
+    height: 32px;
+    background-image: url("../assets/twitter.png");
+    background-size: 32px;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center; }
+
+@media screen and (min-width: 568px) {
+  .footer__twitter {
+    width: 48px;
+    height: 48px;
+    background-size: 48px; } }
+
+body {
+  background-color: #e1e8ed;
+  font-family: 'Droid Sans';
+  color: #292f33;
+  padding: 12px;
+  font-size: 18px; }
+
+@media screen and (min-width: 568px) {
+  body {
+    font-size: 24px; } }
+
+/*# sourceMappingURL=main.css.map */

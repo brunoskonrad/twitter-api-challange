@@ -9,7 +9,6 @@ const TweetsList = React.createClass({
   },
   renderTweets() {
     return this.props.tweets.map((tweet) => {
-      console.log('tweet');
       return <Tweet key={tweet.id} tweet={tweet} />;
     });
   },

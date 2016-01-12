@@ -1,4 +1,5 @@
 var Twitter = require('twitter');
+var moment = require('moment');
 
 function getTwitterObject() {
   return new Twitter({
@@ -22,7 +23,7 @@ function getMedia(tweet) {
 function filterTweetsData(tweet) {
   return {
     id: tweet.id,
-    date: tweet.created_at,
+    date: moment(new Date(tweet.created_at)).format('LLL'),
     content: tweet.text,
     media: getMedia(tweet)
   }

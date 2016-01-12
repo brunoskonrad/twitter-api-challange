@@ -1,3 +1,5 @@
+var webpack = require("webpack");
+
 module.exports = {
   entry: './src/client.jsx',
   output: {
@@ -17,5 +19,8 @@ module.exports = {
     alias: {
       components: __dirname + '/src/components'
     }
-  }
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({minimize: true})
+  ]
 };

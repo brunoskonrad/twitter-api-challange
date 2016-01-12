@@ -6,7 +6,8 @@
   "scripts": {
     "test": "karma start --single-run",
     "build:client": "webpack --config ./webpack.config.client.js",
-    "build:server": "npm run build:client && node src/server",
+    "build:server": "npm run build:client",
+    "serve": "npm run build:server && node src/server"
     "dev": "gulp"
   },
   "author": "",
