@@ -3,10 +3,18 @@
 @import 'components/app';
 @import 'components/search-bar';
 @import 'components/tweet';
+@import 'components/footer';
 
 body {
   background-color: #e1e8ed;
   font-family: 'Droid Sans';
   color: $color-dark-gray;
   padding: 12px;
+  font-size: 18px;
+}
+
+@media screen and (min-width) {
+  body {
+    font-size: 24px;
+  }
 }

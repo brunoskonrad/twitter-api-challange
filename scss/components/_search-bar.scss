@@ -1,9 +1,9 @@
 %form-style {
-  min-height: 30px;
+  min-height: 40px;
 }
 
 .search-bar {
-  font-size: 16px;
+  font-size: 1em;
   display: flex;
   flex-flow: wrap row;
   align-items: center;
@@ -17,6 +17,7 @@
 
   &__input-twitter {
     @extend %form-style;
+    max-width: 60%;
     background-color: $color-almost-white;
     border: 0;
     border-bottom: 2px solid gray;
@@ -32,7 +33,7 @@
     color: $color-white;
     background-color: $color-blue;
     border-radius: 3px;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
     border: 0;
   }
@@ -41,7 +42,6 @@
 @media screen and (min-width: $breakpoint-desktop) {
   .search-bar {
     width: $breakpoint-desktop;
-    font-size: 24px;
 
     &__input-twitter {
       padding: 0 12px;

@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  flex-flow: wrap column;
+  align-content: center;
+  margin-top: 40px;
+  font-size: 1em;
+  color: gray;
+
+  &__twitter {
+    width: 32px;
+    height: 32px;
+    background-image: url('../assets/twitter.png');
+    background-size: 32px;
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: $breakpoint-desktop) {
+  .footer {
+    &__twitter {
+      width: 48px;
+      height: 48px;
+      background-size: 48px;
+    }
+  }
+}
