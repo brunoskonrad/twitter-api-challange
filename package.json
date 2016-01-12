@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "The main task is to get the first 25 tweets from any user.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brunoskonrad/twitter-api-challange"
+  },
   "scripts": {
     "test": "karma start --single-run",
     "build:client": "webpack --config ./webpack.config.client.js",
     "build:server": "npm run build:client",
-    "serve": "npm run build:server && node src/server"
+    "serve": "npm run build:server && node src/server",
     "dev": "gulp"
   },
   "author": "",
