@@ -23,7 +23,7 @@ const App = React.createClass({
 
   render() {
     return (
-      <div>
+      <div className="app">
         <SearchBar onSearch={this.searchTweets} />
         {this.state.tweets.length > 0 &&
           <TweetsList tweets={this.state.tweets} />}

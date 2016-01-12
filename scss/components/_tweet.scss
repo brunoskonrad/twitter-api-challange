@@ -6,7 +6,7 @@
   margin-top: 3em;
 
   &__content {
-    width: 100%;
+    flex: 1 100%;
     margin: 0;
     font-size: 1em;
     line-height: 1.6em;
@@ -25,9 +25,9 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $breakpoint-desktop) {
   .tweet {
-    width: 624px;
+    width: $breakpoint-desktop;
     font-size: 24px;
 
     &__image {

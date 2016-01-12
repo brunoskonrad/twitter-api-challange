@@ -6,17 +6,18 @@
   font-size: 16px;
   display: flex;
   flex-flow: wrap row;
-  margin: 0 auto;
+  align-items: center;
+  background-color: $color-white;
 
   &__greetings {
-    width: 100vw;
+    flex: 1 100%;
     font-size: 1.3em;
     margin-bottom: 12px;
   }
 
   &__input-twitter {
     @extend %form-style;
-    background-color: $color-almost-white;
+    background-color: $color-white;
     border: 0;
     border-bottom: 2px solid gray;
 
@@ -37,9 +38,9 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $breakpoint-desktop) {
   .search-bar {
-    width: 624px;
+    width: $breakpoint-desktop;
     font-size: 24px;
 
     &__input-twitter {
