@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/brunoskonrad/twitter-api-challange"
+    "url": "https://github.com/brunoskonrad/twitter-api-challenge"
   },
   "scripts": {
     "test": "karma start --single-run",
@@ -21,6 +21,7 @@
     "babel-loader": "^6.2.1",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
+    "foreman": "^1.4.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-sass": "^2.1.1",
@@ -35,6 +36,10 @@
     "promise-polyfill": "^2.1.0",
     "react-addons-test-utils": "^0.14.6",
     "webpack": "^1.12.9"
+  },
+  "engines": {
+    "node": "4.0.0",
+    "npm": "2.14.2"
   },
   "dependencies": {
     "express": "^4.13.3",
