@@ -1,12 +1,13 @@
 var Twitter = require('twitter');
 var moment = require('moment');
+require('dotenv').load();
 
 function getTwitterObject() {
   return new Twitter({
-    consumer_key: '9b3UWwgkpJf2yZwDwilRldNWX',
-    consumer_secret: 'C6UAFrwLB9cMHO2vBmD4zt1ix7zcQQdXHMTjAtkJHOF60hyVK1',
-    access_token_key: '139545957-AJ06ErUQW33JmT82CLLS12jdfHcKA9oiueklDsr7',
-    access_token_secret: 'WFmFYaH8vymtoBOgPkiMDxYqbAwVZpqlH6oXh64vTu5Yt',
+    consumer_key: process.env.consumer_key,
+    consumer_secret: process.env.consumer_secret,
+    access_token_key: process.env.access_token_key,
+    access_token_secret: process.env.access_token_secret
   });
 }
 
