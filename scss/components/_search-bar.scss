@@ -7,6 +7,7 @@
   display: flex;
   flex-flow: wrap row;
   align-items: center;
+  position: relative;
   background-color: $color-almost-white;
 
   &__greetings {
@@ -23,8 +24,9 @@
     border-bottom: 2px solid gray;
 
     font-size: 1em;
-    margin-right: 12px;
-    padding: 0 8px;
+    margin-right: 8px;
+    padding-right: 8px;
+    padding-left: 20px;
   }
 
   &__search-button {
@@ -37,6 +39,14 @@
     text-align: center;
     border: 0;
   }
+
+  &__at-placeholder {
+    color: gray;
+    font-size: 1em;
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+  }
 }
 
 @media screen and (min-width: $breakpoint-desktop) {
@@ -44,7 +54,11 @@
     width: $breakpoint-desktop;
 
     &__input-twitter {
-      padding: 0 12px;
+      padding-left: 24px;
+    }
+
+    &__at-placeholder {
+      bottom: 8px;
     }
   }
 }

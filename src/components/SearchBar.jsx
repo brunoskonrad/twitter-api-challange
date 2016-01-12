@@ -22,12 +22,13 @@ const SearchBar = React.createClass({
         </span>
         <input className="search-bar__input-twitter"
           type="text"
-          placeholder="Your @ here"
+          placeholder="username"
           onChange={this.handleInputChange} />
         <button className="search-bar__search-button"
           onClick={this.search}>
           Search
         </button>
+        <span className="search-bar__at-placeholder">@</span>
       </header>
     );
   }
