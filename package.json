@@ -11,7 +11,8 @@
     "test": "karma start --single-run",
     "build:client": "webpack --config ./webpack.config.client.js",
     "serve": "node src/server",
-    "dev": "gulp"
+    "dev": "gulp",
+    "postinstall": "gulp build"
   },
   "author": "",
   "license": "ISC",
