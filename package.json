@@ -35,15 +35,17 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-sass": "^2.1.1",
     "gulp-sourcemaps": "^1.6.0",
-    "jasmine-core": "^2.4.1",
     "json-loader": "^0.5.4",
+    "promise-polyfill": "^2.1.0",
+    "react-addons-test-utils": "^0.14.6",
+    "webpack": "^1.12.9"
+  },
+  "devDependencies": {
     "karma": "^0.13.18",
     "karma-jasmine": "^0.3.6",
     "karma-phantomjs-launcher": "^0.2.3",
     "karma-webpack": "^1.7.0",
-    "phantomjs": "^1.9.19",
-    "promise-polyfill": "^2.1.0",
-    "react-addons-test-utils": "^0.14.6",
-    "webpack": "^1.12.9"
+    "jasmine-core": "^2.4.1",
+    "phantomjs": "^1.9.19"
   }
 }
