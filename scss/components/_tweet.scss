@@ -27,7 +27,7 @@
 
 @media screen and (min-width: $breakpoint-desktop) {
   .tweet {
-    width: $breakpoint-desktop;
+    width: $breakpoint-desktop - 48px;
 
     &__image {
       max-width: 624px;

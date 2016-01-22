@@ -1,14 +1,22 @@
 .app {
-  min-height: calc(100vh - 40px);
+  min-height: 100vh;
   display: flex;
   flex-flow: wrap column;
   align-items: center;
   justify-content: space-between;
+  padding: 12px;
 
   &__loading {
     width: 56px;
     height: 56px;
     margin: 46px 0;
     background-image: url('../assets/loading.svg');
+  }
+}
+
+@media screen and (min-width: $breakpoint-desktop) {
+  .app {
+    padding: 24px;
+    padding-bottom: 12px;
   }
 }

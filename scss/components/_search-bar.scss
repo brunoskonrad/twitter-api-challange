@@ -18,7 +18,8 @@
 
   &__input-twitter {
     @extend %form-style;
-    max-width: 60%;
+    flex: 1 1;
+    max-width: 65%;
     background-color: $color-almost-white;
     border: 0;
     border-bottom: 2px solid gray;
@@ -31,6 +32,7 @@
 
   &__search-button {
     @extend %form-style;
+    flex: 0 1 82px;
     padding: 12px;
     color: $color-white;
     background-color: $color-blue;
@@ -38,6 +40,15 @@
     font-size: 18px;
     text-align: center;
     border: 0;
+    cursor: pointer;
+  }
+
+  &__search-button:hover {
+    background-color: darken($color-blue, 4);
+  }
+
+  &__search-button:active {
+    background-color: darken($color-blue, 6);
   }
 
   &__at-placeholder {
@@ -51,7 +62,7 @@
 
 @media screen and (min-width: $breakpoint-desktop) {
   .search-bar {
-    width: $breakpoint-desktop;
+    width: $breakpoint-desktop - 48px;
 
     &__input-twitter {
       padding-left: 24px;

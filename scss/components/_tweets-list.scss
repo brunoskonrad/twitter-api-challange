@@ -1,0 +1,9 @@
+.tweets-list {
+  width: 100%;
+}
+
+@media screen and (min-width: $breakpoint-desktop) {
+  .tweets-list {
+    width: auto;
+  }
+}
